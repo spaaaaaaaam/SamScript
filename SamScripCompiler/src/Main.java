@@ -8,11 +8,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    static void parse_line(String line){
-        
-    }
+    static void parse_line(String line) {
 
-    static String[] line_to_words(String line) {
         int numOfWords = 1;
         for (int i = 0; i < line.length(); i++) {
             char space = ' ';
@@ -20,23 +17,22 @@ public class Main {
                 numOfWords += 1;
             }
         }
-        i = 0;
-        j = 0
-        String word = ""
+        int i = 0;
+        int j = 0;
+        char space = ' ';
+        String word = "";
         String[] words = new String[numOfWords];
-        while (i < line.length())
-            if (!line.charAt(i) == ""){
+        while (i < line.length()){
+            if (!(line.charAt(i) == space)) {
                 word = word + line.charAt(i);
-            } else
+            } else {
                 words[j] = word;
-                j += 1
-
+                j += 1;
+            }
         }
 
-
-
-        return words;
     }
+
 
     ArrayList<String> functions = new ArrayList<String>();
 
@@ -54,7 +50,8 @@ public class Main {
         while (sc.hasNextLine()){
             String currentLine = sc.nextLine();
             if (!currentLine.equals("")){
-                System.out.println(parse_line(currentLine));
+
+                parse_line(currentLine);
             }
 
         }
