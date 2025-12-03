@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/fake_language.iml" filepath="$PROJECT_DIR$/fake_language.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SamScriptCompiler.iml" filepath="$PROJECT_DIR$/SamScriptCompiler.iml" />
     </modules>
   </component>
 </project>
