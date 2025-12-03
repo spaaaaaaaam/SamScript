@@ -1,0 +1,13 @@
+
+
+Command_group void 3 String Integer Boolean Command_group1
+Command_group1$est$Open_indent
+terminal$add_text String_open Hello world String_close
+terminal$add_text String_open input(0)
+Command_group1$est$Close_indent
+
+@Comment_Begin@ this is a comment @Comment_end@
+
+Command_group void void On_run
+Command_group$estOpen_indent
+    execute command_group1
