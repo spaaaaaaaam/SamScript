@@ -90,6 +90,10 @@ public class Main {
                     }
                 }catch(NullPointerException e){continue;}
 
+                int atribfinder = word.length() - word.replace("$", "").length();
+                word = word.replace("$","");
+
+
                 switch(word){
                     case "Command_group":
                         System.out.println("making new func");

@@ -19,7 +19,11 @@ Command_group1 $establish $On_run $Close_indent End_line
 Command_group $void $$void $$$Main /End_line/
 
 Main $establish $On_run $Open_indent /End_line/
- execute $command_group1 $String_open this is the input $$String_close /End_line/
+ if 1 == 1 Open_indent /End_line/
+  execute $command_group1 $String_open this is the input $$String_close /End_line/
+ if Close_indent /End_line/
+ if 1 != 1 Open_indent /End_line/ @Comment_Begin@ there is no else @Comment_end@
+  terminal $add_text $String_open something has gone terribly wrong $String_close /End_line/
 Main $establish $On_run $Close_indent /End_line/
 
 execute $Main $run /End_line/
