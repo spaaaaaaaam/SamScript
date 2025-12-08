@@ -83,13 +83,18 @@ public class Main {
             for (int j = 0; j < line.length; j++){
                 String word = line[j];
 
-                if (word.equals(" ")){ // if Starts with indentation
-                    indented = true;
-                    continue;
-                }
+                try {
+                    if (word.equals(" ")) { // if Starts with indentation
+                        indented = true;
+                        continue;
+                    }
+                }catch(NullPointerException e){continue;}
+
                 switch(word){
                     case "Command_group":
-
+                        System.out.println("making new func");
+                        break;
+                    case "":
 
                 }
 

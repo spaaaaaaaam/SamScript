@@ -1,25 +1,27 @@
 
-Command_group void 1 String Command_group1 /End_line/
+Command_group $void $$1 $$$String $$$$Command_group1 /End_line/
 
-Command_group1 establish Open_indent def_vars /End_line/
+Command_group1 $establish $def_vars $Open_indent  /End_line/
 
- Command_group1 establish var int (num1) /End_line/
+ Command_group1 $def_vars var $int $$num1 /End_line/
 
-Command_group1 establish Close_indent def_vars /End_line/
+Command_group1 $establish $def_vars $Close_indent /End_line/
 
-Command_group1 establish Open_indent /End_line/
+Command_group1 $establish $On_run $Open_indent /End_line/
 
- terminal$add_text String_open Hello world String_close /End_line/
- terminal$add_text String_open input(0) String_close /End_line/
+ terminal $add_text $String_open Hello world $$String_close /End_line/
+ terminal $add_text $String_open input0 $$String_close /End_line/
 
-Command_group1 establish Close_indent End_line
+Command_group1 $establish $On_run $Close_indent End_line
 
 @Comment_Begin@ this is a comment @Comment_end@ /End_line/
 
-Command_group void void Main /End_line/
+Command_group $void $$void $$$Main /End_line/
 
-Main establish Open_indent /End_line/
- execute command_group1 String_open this is the input String_close /End_line/
-Main$est$Close_indent /End_line/
+Main $establish $On_run $Open_indent /End_line/
+ execute $command_group1 $String_open this is the input $$String_close /End_line/
+Main $establish $On_run $Close_indent /End_line/
+
+execute $Main $run /End_line/
 
 End_program /End_line/
